@@ -4,8 +4,8 @@ body {
 }
 
 nav {
-    background-color: pink;
-    color: black;
+    background-color: #ffc2dd;
+    color: white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,9 +13,13 @@ nav {
 }
 
 nav > a {
-    margin: 10px;
+    padding: 10px;
     text-decoration: none;
     color: white;
+}
+
+.active {
+    background-color: #f74d98;
 }
 
 .logo {
@@ -29,6 +33,16 @@ nav > a {
 
 .header-text {
     font-size: 24px;
+}
+
+.main-page {
+    background-color: #ffe3ef;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 #footer > p {

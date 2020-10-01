@@ -8,7 +8,7 @@
   <body>
     <img class="logo" alt="lovely-nails-logo" src="images/lovelynailslogo.png">
     <nav>
-        <a href="index.php">Home</a>
-        <a href="about.php">About</a>
-        <a href="services.php">Services</a>
+        <a <?php if ($pageName == "home") { echo "class='active';"; } ?> href="index.php">Home</a>
+        <a <?php if ($pageName == "about") { echo "class='active';"; } ?> href="about.php">About</a>
+        <a <?php if ($pageName == "services") { echo "class='active';"; } ?> href="services.php">Services</a>
 </nav>
