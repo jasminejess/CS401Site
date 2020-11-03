@@ -6,14 +6,14 @@
     $_SESSION['output'] = array();
 
     if (strlen($_POST['name']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['password']) == 0) {
-        $logger->LogInfo("User entered invalid form input");
+        $logger->LogDebug("User entered invalid form input");
         $_SESSION['output'][] = "Invalid form inputs";
         header("Location: https://stormy-cliffs-79964.herokuapp.com/register.php");
         exit();
     }
 
     if (strlen($_POST('password')) < 8 || strlen($_POST) > 64) {
-        $logger->LogInfo("User entered invalid password format");
+        $logger->LogDebug("User entered invalid password format");
         $_SESSION['output'][] = "Password must be at least 8 characters";
         header("Location: https://stormy-cliffs-79964.herokuapp.com/register.php");
         exit();
