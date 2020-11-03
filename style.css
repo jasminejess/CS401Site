@@ -75,6 +75,14 @@ nav > a {
     
 }
 
+.output {
+    border: black 1px solid;
+    padding: 10px;
+    color: white;
+    background-color: #f74d98;
+    width: 100%;
+}
+
 form {
     padding: 10px;
 }
