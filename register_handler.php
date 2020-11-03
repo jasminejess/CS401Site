@@ -15,10 +15,11 @@
 
     if($dao->userExists($_POST['email'])) {
         $_SESSION['output'] = "User with this email already exists";
-        header("Location: http://localhost:8888/cs401/login.php");
+        header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     } else {
         $dao->addUser($_POST['name'], $_POST['email'], $_POST['password']);
         $_SESSION['output'] = "User successfully created";
+        header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     }
     exit();
 

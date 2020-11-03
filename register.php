@@ -19,4 +19,12 @@
     </div>
   </div>
 <div>
-<?php require_once "footer.php"; ?>
+<?php 
+    require_once "footer.php"; 
+    
+    if(isset($_SESSION['output'])) {
+        foreach($_SESSION['output'] as $message) {
+            echo "<div class='output{$message}</div>";
+        }
+    }
+?>
