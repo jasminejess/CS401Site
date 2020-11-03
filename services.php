@@ -4,7 +4,10 @@
 ?>
 <div>
   <div class="main-page">
-    <h1>Services page coming soon</h1>
+    <p class="main-h1">Services</p>
+    <div class="main-content">
+      <h2></h2>
+    </div>
   </div>
 <div>
 <?php require_once "footer.php"; ?>

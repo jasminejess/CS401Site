@@ -8,9 +8,10 @@
   <body>
     <nav>
       <img class="logo" alt="lovely-nails-logo" src="images/lovelynailslogo.png">
-      <a <?php if ($pageName == "home") { echo "class='active';"; } ?> href="index.php">Home</a>
-      <a <?php if ($pageName == "about") { echo "class='active';"; } ?> href="about.php">About</a>
-      <a <?php if ($pageName == "services") { echo "class='active';"; } ?> href="services.php">Services</a>
+      <a <?php if ($pageName == "home") { echo "class='active';"; } ?> href="index.php">HOME</a>
+      <a <?php if ($pageName == "about") { echo "class='active';"; } ?> href="about.php">ABOUT</a>
+      <a <?php if ($pageName == "services") { echo "class='active';"; } ?> href="services.php">SERVICES</a>
+      <a <?php if ($pageName == "login") { echo "class='active';"; } ?> href="login.php">LOGIN</a>
       <div class="nav-item">
         <p>208-433-1777</p>
         <p>2721 Broadway Ave. Boise, ID</p>
