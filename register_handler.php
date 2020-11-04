@@ -3,20 +3,17 @@
     require_once 'dao.php';
     require_once 'Klogger.php';
     $logger = new Klogger("log.txt", Klogger::DEBUG);
-    // $_SESSION['output'] = array();
+    $_SESSION['output'] = array();
 
     if (strlen($_POST['name']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['password']) == 0) {
         $logger->LogDebug("User entered invalid form input");
-        // $_SESSION['output'][] = "Invalid form inputs";
-        header("Location: https://stormy-cliffs-79964.herokuapp.com/register.php");
-        exit();
+        $_SESSION['output'][] = "Invalid form inputs";
+
     }
 
     if (strlen($_POST['password']) < 8) {
         $logger->LogDebug("User entered invalid password format");
-        // $_SESSION['output'][] = "Password must be at least 8 characters";
-        header("Location: https://stormy-cliffs-79964.herokuapp.com/register.php");
-        exit();
+        $_SESSION['output'][] = "Password must be at least 8 characters";
     }
     
 
