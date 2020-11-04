@@ -23,6 +23,7 @@ class Dao {
             $conn = new PDO("mysql:host={$this->host};port=8889;dbname={$this->db}", $this->user, $this->pass);
             return $conn;
         } catch (Exception $e) {
+            $this->logger->LogDebug("Failed to make db connection");
             echo print_r($e,1);
             exit;
         }
