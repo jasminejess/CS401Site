@@ -16,10 +16,10 @@
                 }
             }
         ?>
-        <form method="post" action="register_handler.php">
+        <form method="POST" action="register_handler.php">
             <div>Name: <input type="text" name="name"/></div>
-            <div>Email: <input type="text" name="Email"/></div>
-            <div>Password: <input type="password" name="Password"/></div>
+            <div>Email: <input type="text" name="email"/></div>
+            <div>Password: <input type="password" name="password"/></div>
             <div><input type="submit" name="register" /></div>
             <div><a href="login.php">Click here to login to an existing account</a></div>
         </form>
