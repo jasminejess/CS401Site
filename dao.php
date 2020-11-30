@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Klogger.php';
+require_once 'KLogger.php';
 
 class Dao {
     // private $db = "lovelynails";
@@ -14,7 +14,7 @@ class Dao {
     private $logger;
 
     public function __construct () {
-        $this->logger = new KLogger("log.txt", Klogger::DEBUG);
+        $this->logger = new KLogger("log.txt", KLogger::DEBUG);
     }
 
     public function getConnection () {

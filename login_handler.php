@@ -2,8 +2,8 @@
 
     session_start();
     require_once 'dao.php';
-    require_once 'Klogger.php';
-    $logger = new Klogger("log.txt", Klogger::DEBUG);
+    require_once 'KLogger.php';
+    $logger = new KLogger("log.txt", KLogger::DEBUG);
     $_SESSION['output'] = array();
 
     $dao = new Dao();

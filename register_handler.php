@@ -1,8 +1,8 @@
 <?php
     session_start();
     require_once 'dao.php';
-    require_once 'Klogger.php';
-    $logger = new Klogger("log.txt", Klogger::DEBUG);
+    require_once 'KLogger.php';
+    $logger = new KLogger("log.txt", KLogger::DEBUG);
     $_SESSION['output'] = array();
 
     if (strlen($_POST['name']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['password']) == 0) {
