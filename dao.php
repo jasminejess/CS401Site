@@ -56,7 +56,7 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = 'SELECT * FROM users WHERE email = ":email;"';
+            $query = 'SELECT * FROM users WHERE email = ":email";';
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
