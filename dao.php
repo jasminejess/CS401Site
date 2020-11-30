@@ -32,14 +32,14 @@ class Dao {
     public function getUsers () {
         $this->logger->LogDebug("Getting all users");
         $conn = $this->getConnection();
-        return $conn->query("select * from users", PDO::FETCH_ASSOC);
+        return $conn->query("SELECT * FROM users", PDO::FETCH_ASSOC);
     }
 
     public function addUser ($name, $email, $password) {
         $this->logger->LogDebug("Trying to add a new user...");
         try {
             $conn = $this->getConnection();
-            $query = "Insert into users (email, Name, password) values (:email, :name, :password);";
+            $query = "INSERT INTO users (email, Name, password) VALUES (:email, :name, :password);";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->bindParam(":name", $name, PDO::PARAM_STR);
@@ -56,7 +56,7 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = 'Select * from users where email = ":email;"';
+            $query = 'SELECT * FROM users WHERE email = ":email;"';
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
