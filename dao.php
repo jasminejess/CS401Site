@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Klogger.php';
+require_once 'KLogger.php';
 
 class Dao {
     // private $db = "lovelynails";
