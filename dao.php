@@ -83,7 +83,6 @@ class Dao {
             $query = "SELECT * FROM users WHERE email = ':email';";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
-            $q->bindParam(":password", $password);
             $q->execute();
             $result = $q->fetchColumn();
             if($result['pass'] == $password) {
