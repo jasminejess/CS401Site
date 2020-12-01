@@ -1,6 +1,7 @@
 <?php
 
 require_once 'KLogger.php';
+require_once "user.php";
 
 class Dao {
     // private $db = "lovelynails";
@@ -60,14 +61,13 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchAll(PDO::FETCH_ASSOC);
-            if($result > 1) {
+            $result = $q->fetchAll(PDO::FETCH_CLASS, "user");
+            if(sizeof($result) > 0) {
                 $this->logger->LogDebug("User found!");
-                return true;
-            } else {
-                $this->logger->LogDebug("User doesn't exist");
-                return false;
+                //return true;
             }
+            $this->logger->LogDebug("User doesn't exist");
+            return false;
         } catch (Exception $e) {
             $this->logger->LogDebug($e);
             exit();
@@ -82,8 +82,8 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchAll(PDO::FETCH_ASSOC);
-            if($result > 0) {
+            $result = $q->fetchAll();
+            if(sizeof($result) > 0) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
