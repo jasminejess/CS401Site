@@ -8,12 +8,14 @@
     if (strlen($_POST['name']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['password']) == 0) {
         $logger->LogDebug("User entered invalid form input");
         $_SESSION['output'][] = "Invalid form inputs";
+        exit();
 
     }
 
     if (strlen($_POST['password']) < 8) {
         $logger->LogDebug("User entered invalid password format");
         $_SESSION['output'][] = "Password must be at least 8 characters";
+        exit();
     }
     
 
@@ -22,14 +24,11 @@
 
     if($dao->userExists($_POST['email'])) {
         $_SESSION['output'][] = "User with this email already exists";
-        header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
-        exit();
     } else {
         $dao->addUser($_POST['name'], $_POST['email'], $_POST['password']);
         $_SESSION['output'][] = "User successfully created";
-        header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
-        exit();
     }
-    
+    header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
+    exit();
 
 
