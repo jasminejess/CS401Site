@@ -20,8 +20,8 @@
         ?>
         <h3>Log in to see other users</h3>
         <form method="post" action="login_handler.php">
-            <div>Email: <input type="text" name="Email"/></div>
-            <div>Password: <input type="password" name="Password"/></div>
+            <div>Email: <input type="text" name="email"/></div>
+            <div>Password: <input type="password" name="password"/></div>
             <div><input type="submit" name="Login" /></div>
 <hr/>
             <div><a href="register.php">Click here to create an account</a></div>
