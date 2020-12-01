@@ -85,7 +85,7 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetchAll();
-            if($result['pass'] == $password) {
+            if($result[0]['pass'] == $password) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
