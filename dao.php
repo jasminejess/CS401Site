@@ -80,17 +80,19 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = "SELECT pass FROM users WHERE email = ':email';";
+            $query = "SELECT * FROM users WHERE email = ':email';";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetchAll();
-            if($result == $password) {
-                $this->logger->LogDebug("User login valid");
-                return true;
-            } else {
-                $this->logger->LogDebug("User login invalid");
-                return false;
+            foreach ($result as $user) {
+                if($result["pass"] == $password) {
+                    $this->logger->LogDebug("User login valid");
+                    return true;
+                } else {
+                    $this->logger->LogDebug("User login invalid");
+                    return false;
+                }
             }
         } catch (Exception $e) {
             $this->logger->LogDebug($e);
