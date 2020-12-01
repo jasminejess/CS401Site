@@ -83,6 +83,7 @@ class Dao {
             $query = "SELECT COUNT(*) FROM users WHERE email = ':email' AND pass = ':password';";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
+            $q->bindParam(":password", $password);
             $q->execute();
             $result = $q->fetch();
             if($result == 1) {
