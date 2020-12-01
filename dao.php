@@ -62,7 +62,7 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchAll(PDO::FETCH_CLASS, "user");
+            $result = $q->fetchAll();
             if(sizeof($result) > 0) {
                 $this->logger->LogDebug("User found!");
                 return true;

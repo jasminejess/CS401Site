@@ -22,9 +22,9 @@
     $logger->LogDebug("Attempting to add user");
     $dao = new Dao();
 
-    if($dao->userExists($_POST['email']) == true) {
+    if($dao->userExists($_POST['email'])) {
         $_SESSION['output'][] = "User with this email already exists";
-    } else if($dao->addUser($_POST['name'], $_POST['email'], $_POST['password']) == true){
+    } else if($dao->addUser($_POST['name'], $_POST['email'], $_POST['password'])){
         $_SESSION['output'][] = "User successfully created";
     }
 
