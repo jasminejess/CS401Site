@@ -84,7 +84,7 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchColumn();
+            $result = $q->fetch();
             echo print_r("HERE",1);
             echo print_r($result['pass'],1);
             if($result['pass'] == $password) {
