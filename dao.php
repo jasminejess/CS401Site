@@ -58,17 +58,18 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = "SELECT * FROM users WHERE email = ':email';";
+            $query = "SELECT COUNT(*) FROM users WHERE email = ':email';";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchColumn();
+            $result = $q->fetch();
             if($result > 0) {
                 $this->logger->LogDebug("User found!");
                 return true;
+            } else {
+                $this->logger->LogDebug("User doesn't exist");
+                return false;
             }
-            $this->logger->LogDebug("User doesn't exist");
-            return false;
         } catch (Exception $e) {
             $this->logger->LogDebug($e);
             exit();
