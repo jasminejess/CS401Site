@@ -62,8 +62,8 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetchAll();
-            if(sizeof($result) > 0) {
+            $result = $q->fetchColumn();
+            if($result > 0) {
                 $this->logger->LogDebug("User found!");
                 return true;
             }
