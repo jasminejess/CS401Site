@@ -40,7 +40,7 @@ class Dao {
         $this->logger->LogDebug("Trying to add a new user...");
         try {
             $conn = $this->getConnection();
-            $query = "INSERT INTO users (email, Name, password) VALUES (:email, :name, :password);";
+            $query = "INSERT INTO users (email, name, pass) VALUES (:email, :name, :password);";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->bindParam(":name", $name, PDO::PARAM_STR);
