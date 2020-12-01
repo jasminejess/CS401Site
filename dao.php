@@ -85,6 +85,7 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetchColumn();
+            echo print_r("HERE",1);
             echo print_r($result['pass'],1);
             if($result['pass'] == $password) {
                 $this->logger->LogDebug("User login valid");
