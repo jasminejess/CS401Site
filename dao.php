@@ -86,7 +86,7 @@ class Dao {
             $q->execute();
             $result = $q->fetchAll();
             foreach ($result as $user) {
-                if($result["pass"] == $password) {
+                if($user["pass"] == $password) {
                     $this->logger->LogDebug("User login valid");
                     return true;
                 } else {
