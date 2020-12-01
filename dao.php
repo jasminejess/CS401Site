@@ -61,7 +61,8 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetchAll(PDO::FETCH_ASSOC);
-            if($result > 0) {
+            echo $result;
+            if($result > 1) {
                 $this->logger->LogDebug("User found!");
                 return true;
             } else {
@@ -83,6 +84,7 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetchAll(PDO::FETCH_ASSOC);
+            echo $result;
             if($result > 0) {
                 $this->logger->LogDebug("User login valid");
                 return true;
