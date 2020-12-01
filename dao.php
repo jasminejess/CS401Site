@@ -73,4 +73,26 @@ class Dao {
             exit();
         }
     }
+
+    public function checkUserLogin ($email, $password) {
+        $this->logger->LogDebug("Trying to find a user...");
+        try {
+            $conn = $this->getConnection();
+            $query = "SELECT * FROM users WHERE email = ':email' AND password = ':password';";
+            $q = $conn->prepare($query);
+            $q->bindParam(":email", $email);
+            $q->execute();
+            $result = $q->fetchAll(PDO::FETCH_ASSOC);
+            if($result > 0) {
+                $this->logger->LogDebug("User login valid");
+                return true;
+            } else {
+                $this->logger->LogDebug("User login invalid");
+                return false;
+            }
+        } catch (Exception $e) {
+            $this->logger->LogDebug($e);
+            exit();
+        }
+    }
 }

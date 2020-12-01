@@ -8,7 +8,7 @@
 
     $dao = new Dao();
 
-    if($dao->userExists($_POST['email'])) {
-        $_SESSION['output'][] = "User with this email already exists";
+    if($dao->checkUserLogin($_POST['email'], $_POST['password'])) {
+        $_SESSION['output'][] = "Successfully logged in!";
         header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     } 
