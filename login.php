@@ -15,6 +15,7 @@
                 foreach($_SESSION['output'] as $message) {
                     echo "<div class='output'>{$message}</div>";
                 }
+                unset($_SESSION['output']);
             }
         ?>
         <h3>Log in to see other users</h3>

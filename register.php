@@ -14,6 +14,7 @@
                 foreach($_SESSION['output'] as $message) {
                     echo "<div class='output'>{$message}</div>";
                 }
+                unset($_SESSION['output']);
             }
         ?>
         <form method="POST" action="register_handler.php">
