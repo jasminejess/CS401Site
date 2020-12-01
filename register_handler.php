@@ -24,10 +24,10 @@
 
     if($dao->userExists($_POST['email']) == true) {
         $_SESSION['output'][] = "User with this email already exists";
-    } else {
-        $dao->addUser($_POST['name'], $_POST['email'], $_POST['password']);
+    } else if($dao->addUser($_POST['name'], $_POST['email'], $_POST['password']) == true){
         $_SESSION['output'][] = "User successfully created";
     }
+
     header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     exit();
 

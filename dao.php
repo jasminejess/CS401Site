@@ -47,6 +47,7 @@ class Dao {
             $q->bindParam(":password", $password);
             $q->execute();
             $this->logger->LogDebug("New user added successfully");
+            return true;
         } catch (Exception $e) {
             $this->logger->LogDebug($e);
             exit();
@@ -64,7 +65,7 @@ class Dao {
             $result = $q->fetchAll(PDO::FETCH_CLASS, "user");
             if(sizeof($result) > 0) {
                 $this->logger->LogDebug("User found!");
-                //return true;
+                return true;
             }
             $this->logger->LogDebug("User doesn't exist");
             return false;
