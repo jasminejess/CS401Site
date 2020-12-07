@@ -8,9 +8,9 @@ nav {
     color: #f74d98;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 16px;
+    margin-left: 10%;
 }
 
 nav > a {
@@ -22,6 +22,7 @@ nav > a {
 .nav-item {
     width: 300px;
     padding: 20px;
+    right: 10%;
 }
 
 .nav-item > p {
