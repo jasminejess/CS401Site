@@ -7,8 +7,8 @@
 
 <div>
   <div class="main-page">
-    <p class="main-h1">Register as a User</p>
     <div class="main-content">
+        <p class="main-h1">Register as a User</p>
         <?php 
             if(isset($_SESSION['output'])) {
                 foreach($_SESSION['output'] as $message) {
