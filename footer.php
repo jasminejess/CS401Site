@@ -3,6 +3,8 @@
       <div id="column">
           <h1>CONTACT</h1>
           <p>Phone: 208-433-1777</p>
+          <a href="https://www.instagram.com/lovelynailsboise/"><img class="social-logo" alt="instagram-logo" src="images/ig-logo.png"></a>
+          <a href="https://www.facebook.com/lovelynailsboise/?rf=1697763800314152"><img class="social-logo" alt="facebook-logo" src="images/fb-logo.png"></a>
         </div>
         <div id="column">
           <h1>ADDRESS</h1>
