@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CS401 Site</title>
+    <title>Lovely Nails Salon</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/lightslider.css">
     <link rel="icon" type="image/png" href="images/lovelynailsfavicon.png">
