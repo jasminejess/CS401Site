@@ -1,9 +1,11 @@
 $(document).ready(function() {
-    $("#lightSlider").lightSlider({
-        gallery: true,
-        item: 1,
+    $("#lightslider").lightSlider({
         loop: true,
-        slideMargin: 0,
-        thumbItem: 9
+        keyPress: true
+        // gallery: true,
+        // item: 1,
+        // loop: true,
+        // slideMargin: 0,
+        // thumbItem: 9
     }); 
 });
