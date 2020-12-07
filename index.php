@@ -7,6 +7,15 @@
     <div class="main-content">
     <p class="main-h1">Welcome to Lovely Nails Salon</p>
       <ul id="lightslider">
+        <li data-thumb="gallery_images/IMG_2492.jpg">
+            <img src="gallery_images/IMG_2492.jpg" />
+        </li>
+        <li data-thumb="gallery_images/IMG_2578.jpg">
+            <img src="gallery_images/IMG_2578.jpg" />
+        </li>
+        <li data-thumb="gallery_images/IMG_2678.jpg">
+            <img src="gallery_images/IMG_2678.jpg" />
+        </li>
        <li data-thumb="gallery_images/IMG_1636.jpg">
             <img src="gallery_images/IMG_1636.jpg" />
         </li>
@@ -69,15 +78,6 @@
         </li>
         <li data-thumb="gallery_images/IMG_2490.jpg">
             <img src="gallery_images/IMG_2490.jpg" />
-        </li>
-        <li data-thumb="gallery_images/IMG_2492.jpg">
-            <img src="gallery_images/IMG_2492.jpg" />
-        </li>
-        <li data-thumb="gallery_images/IMG_2578.jpg">
-            <img src="gallery_images/IMG_2578.jpg" />
-        </li>
-        <li data-thumb="gallery_images/IMG_2678.jpg">
-            <img src="gallery_images/IMG_2678.jpg" />
         </li>
         <li data-thumb="gallery_images/IMG_2724.jpg">
             <img src="gallery_images/IMG_2724.jpg" />
