@@ -7,7 +7,6 @@
     <script src="js/gallery_script.js"></script>
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
     <link rel="icon" type="image/png" href="images/lovelynailsfavicon.png">
     <meta charset="UTF-8">
   </head>
@@ -24,4 +23,4 @@
       </div>
       <a href="https://www.instagram.com/lovelynailsboise/"><img class="social-logo" alt="instagram-logo" src="images/ig-logo.png"></a>
       <a href="https://www.facebook.com/lovelynailsboise/?rf=1697763800314152"><img class="social-logo" alt="facebook-logo" src="images/fb-logo.png"></a>
-</nav>
+    </nav>
