@@ -29,7 +29,7 @@
             <div>
                 <input type="submit" name="Login" />
             </div>
-<hr/>
+            <hr/>
             <div>
                 <a href="register.php">Click here to create an account</a>
             </div>

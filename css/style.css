@@ -137,6 +137,7 @@ form > div > a {
 #column > h1 {
     text-decoration: none;
     font-weight: 400;
+    font-size: 16px;
 }
 
 #column > p {

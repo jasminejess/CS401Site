@@ -30,6 +30,7 @@
             <div>
                 <input type="submit" name="register" />
             </div>
+            </hr>
             <div>
                 <a href="login.php">Click here to login to an existing account</a>
             </div>
