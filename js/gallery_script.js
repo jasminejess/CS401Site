@@ -1,3 +1,7 @@
 $(document).ready(function() {
-    $("#lightslider").lightSlider(); 
+    $("#lightslider").lightSlider({
+        item: 4,
+        loop: true,
+        slideMove: 2,
+    }); 
 });
