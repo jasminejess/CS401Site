@@ -1,13 +1,12 @@
 <html>
   <head>
     <title>CS401 Site</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="images/lovelynailsfavicon.png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/lightslider.js"></script>
     <script src="js/gallery_script.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/png" href="images/lovelynailsfavicon.png">
     <meta charset="UTF-8">
   </head>
   <body>
