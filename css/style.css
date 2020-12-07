@@ -61,6 +61,12 @@ nav > a {
     padding: 10px;
 }
 
+.sub-content {
+    background-color: white;
+    margin: 0px;
+    padding: 10px;
+}
+
 .main-page {
     background-color: #FF86BA;
     width: 100%;
