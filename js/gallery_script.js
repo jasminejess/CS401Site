@@ -4,6 +4,7 @@ $(document).ready(function() {
         loop: true,
         slideMove: 2,
         auto: true,
+        pauseOnHover: true,
         controls: true,
         gallery: false
     }); 
