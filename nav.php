@@ -1,7 +1,12 @@
 <html>
   <head>
     <title>CS401 Site</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css" />
     <link rel="icon" type="image/png" href="images/lovelynailsfavicon.png">
     <meta charset="UTF-8">
   </head>
