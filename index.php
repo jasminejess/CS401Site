@@ -4,8 +4,8 @@
 ?>
 <div>
   <div class="main-page">
-    <p class="main-h1">Welcome to Lovely Nails Salon</p>
     <div class="main-content">
+    <p class="main-h1">Welcome to Lovely Nails Salon</p>
       <ul id="lightslider">
        <li data-thumb="gallery_images/IMG_1636.jpg">
             <img src="gallery_images/IMG_1636.jpg" />
