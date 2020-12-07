@@ -119,15 +119,17 @@ form > div > a {
     color: #f74d98;
 }
 
-#footer > p {
+#footer {
+    display: block;
+    float: center;
+    width: 90%;
     font-size: 12px;
-    text-align: center;
     margin: 5px;
 }
 
 #column {
     display: block;
-    width: 300px;
+    width: 20%;
     float: left;
     margin: 0 10px;
     text-align: center;
