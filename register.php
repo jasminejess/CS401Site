@@ -18,11 +18,21 @@
             }
         ?>
         <form method="POST" action="register_handler.php">
-            <div>Name: <input type="text" name="name"/></div>
-            <div>Email: <input type="text" name="email"/></div>
-            <div>Password: <input type="password" name="password"/></div>
-            <div><input type="submit" name="register" /></div>
-            <div><a href="login.php">Click here to login to an existing account</a></div>
+            <div>
+                <label for="name">Name: </label> <input type="text" name="name"/>
+            </div>
+            <div>
+                <label for="email">Email: </label> <input type="text" name="email"/>
+            </div>
+            <div>
+                <label for="password">Password: </label> <input type="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" name="register" />
+            </div>
+            <div>
+                <a href="login.php">Click here to login to an existing account</a>
+            </div>
         </form>
     </div>
   </div>

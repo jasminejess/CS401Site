@@ -20,11 +20,19 @@
         ?>
         <h3>Log in to see other users</h3>
         <form method="post" action="login_handler.php">
-            <label for="email">Email: </label> <input type="text" name="email"/>
-            <label for="password">Password: </label> <input type="password" name="password"/>
-            <div><input type="submit" name="Login" /></div>
+            <div>
+                <label for="email">Email: </label> <input type="text" name="email"/>
+            </div>
+            <div>
+                <label for="password">Password: </label> <input type="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" name="Login" />
+            </div>
 <hr/>
-            <div><a href="register.php">Click here to create an account</a></div>
+            <div>
+                <a href="register.php">Click here to create an account</a>
+            </div>
         </form>
     </div>
   </div>
