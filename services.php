@@ -4,8 +4,8 @@
 ?>
 <div>
   <div class="main-page">
-    <p class="main-h1">Services</p>
     <div class="main-content">
+      <p class="main-h1">Services</p>
       <h2>Service list coming soon</h2>
     </div>
   </div>

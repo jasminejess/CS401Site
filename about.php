@@ -5,8 +5,8 @@
 
 <div>
   <div class="main-page">
-    <p class="main-h1">About Us</p>
     <div class="main-content">
+      <p class="main-h1">About Us</p>
       <h2>Hours</h2>
     </div>
   </div>
