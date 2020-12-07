@@ -5,6 +5,7 @@ $(document).ready(function() {
         slideMove: 2,
         auto: true,
         pauseOnHover: true,
+        currentPagerPosition: 'middle',
         controls: true,
         gallery: false
     }); 
