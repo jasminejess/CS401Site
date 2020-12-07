@@ -5,6 +5,6 @@ $(document).ready(function() {
         slideMove: 2,
         auto: true,
         controls: true,
-        gallery: true
+        gallery: false
     }); 
 });
