@@ -122,10 +122,17 @@ form > div > a {
 #footer {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 80%;
     font-size: 12px;
     margin: 5px;
+}
+
+#footer > p {
+    margin: 0;
+}
+
+#footer > h1 {
+    text-decoration: none;
 }
 
 #column {
