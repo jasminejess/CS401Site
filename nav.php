@@ -18,8 +18,8 @@
       <a <?php if ($pageName == "about") { echo "class='active';"; } ?> href="about.php">ABOUT</a>
       <a <?php if ($pageName == "services") { echo "class='active';"; } ?> href="services.php">SERVICES</a>
       <a <?php if ($pageName == "login") { echo "class='active';"; } ?> href="login.php">LOGIN</a>
-      <a href="https://www.instagram.com/lovelynailsboise/"><img class="social-logo" alt="instagram-logo" src="images/ig-logo.png"></a>
-      <a href="https://www.facebook.com/lovelynailsboise/?rf=1697763800314152"><img class="social-logo" alt="facebook-logo" src="images/fb-logo.png"></a>
+      <a id="social" href="https://www.instagram.com/lovelynailsboise/"><img class="social-logo" alt="instagram-logo" src="images/ig-logo.png"></a>
+      <a id="social href="https://www.facebook.com/lovelynailsboise/?rf=1697763800314152"><img class="social-logo" alt="facebook-logo" src="images/fb-logo.png"></a>
       
       <div class="nav-item">
         <p>208-433-1777</p>
