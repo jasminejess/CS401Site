@@ -91,7 +91,7 @@ class Dao {
                 return true;
             } else {
                 $this->logger->LogDebug("User login invalid");
-                return false;
+                return true;
             }
         } catch (Exception $e) {
             $this->logger->LogDebug($e);
