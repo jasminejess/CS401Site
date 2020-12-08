@@ -1,6 +1,7 @@
 <?php 
     $pageName = "home";
     require_once "nav.php";
+    
     if(isset($_SESSION["access_granted"]) && !($_SESSION["access_granted"]) || 
     !isset($_SESSION["access_granted"])) {
         $_SESSION['output'] = "Must log in to access this page";
