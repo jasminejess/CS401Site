@@ -68,8 +68,8 @@
         <li data-thumb="gallery_images/IMG_2449.jpg">
             <img src="gallery_images/IMG_2449.jpg" />
         </li>
-        <li data-thumb="gallery_images/IMG_2456.copy.jpg">
-            <img src="gallery_images/IMG_2456.copy.jpg" />
+        <li data-thumb="gallery_images/IMG_2456.jpg">
+            <img src="gallery_images/IMG_2456.jpg" />
         </li>
         <li data-thumb="gallery_images/IMG_2467.jpg">
             <img src="gallery_images/IMG_2467.jpg" />
