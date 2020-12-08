@@ -3,7 +3,11 @@
     require_once "nav.php";
 
     session_start();
-    $_SESSION['login'] = "user";
+
+    $email = "";
+    if(isset($_SESSION["email_preset"])) {
+        $email = $_SESSION["email_preset"];
+    }
 ?>
 
 <div>
@@ -21,7 +25,7 @@
         <h3>Log in to see more images</h3>
         <form method="post" action="login_handler.php">
             <div>
-                <label for="email">Email: </label> <input type="text" name="email"/>
+                <label for="email">Email: </label> <input type="text" name="email" value="<?php echo $email; ?>"/>
             </div>
             <div>
                 <label for="password">Password: </label> <input type="password" name="password"/>
