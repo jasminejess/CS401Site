@@ -85,8 +85,8 @@ class Dao {
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
             $q->execute();
-            $result = $q->fetch(PDO::FETCH_ASSOC);
-            if(password_verify($password, $result['pass'])) {
+            $user = $q->fetch();
+            if(password_verify($password, $user['pass'])) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
