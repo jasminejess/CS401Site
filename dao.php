@@ -40,7 +40,7 @@ class Dao {
         $this->logger->LogDebug("Trying to add a new user...");
         try {
             $conn = $this->getConnection();
-            $pass = password_hash($password, PASSWORD_DEFAULT);
+            $pass = password_hash($password, PASSWORD_BCRYPT);
             $query = "INSERT INTO users (email, name, pass) VALUES (:email, :name, :password);";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
@@ -91,7 +91,7 @@ class Dao {
                 return true;
             } else {
                 $this->logger->LogDebug("User login invalid");
-                return true;
+                return false;
             }
         } catch (Exception $e) {
             $this->logger->LogDebug($e);

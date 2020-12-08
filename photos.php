@@ -2,8 +2,8 @@
     $pageName = "home";
     require_once "nav.php";
 
-    if(!isset($_SESSION["access_granted"])) {
-        $_SESSION['output'] = "Must log in to access this page";
+    if(!isset($_SESSION["access_granted"]) || !$_SESSION["access_granted"]) {
+        $_SESSION['output'][] = "Must log in to access this page";
         header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     }
 ?>
