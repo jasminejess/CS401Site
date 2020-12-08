@@ -86,8 +86,7 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetch();
-            $pass = password_hash($password, PASSWORD_BCRYPT);
-            if($result && ($pass == result['pass'])) {
+            if($result && password_verify($password, $result['pass'])) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
