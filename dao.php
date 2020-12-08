@@ -40,7 +40,7 @@ class Dao {
         $this->logger->LogDebug("Trying to add a new user...");
         try {
             $conn = $this->getConnection();
-            $pass = password_hash($password, PASSWORD_BCRYPT);
+            $pass = password_hash($password, PASSWORD_DEFAULT);
             $query = "INSERT INTO users (email, name, pass) VALUES (:email, :name, :password);";
             $q = $conn->prepare($query);
             $q->bindParam(":email", $email);
@@ -86,7 +86,7 @@ class Dao {
             $q->bindParam(":email", $email);
             $q->execute();
             $result = $q->fetch(PDO::FETCH_ASSOC);
-            if(password_verify($password, $result["pass"])) {
+            if(password_verify($password, $result['pass'])) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
