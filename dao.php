@@ -43,9 +43,9 @@ class Dao {
             $pass = password_hash($password, PASSWORD_BCRYPT);
             $query = "INSERT INTO users (email, name, pass) VALUES (:email, :name, :password);";
             $q = $conn->prepare($query);
-            $q->bindParam(":email", $email);
-            $q->bindParam(":name", $name, PDO::PARAM_STR);
-            $q->bindParam(":password", $pass);
+            $q->bindParam(':email', $email);
+            $q->bindParam(':name', $name, PDO::PARAM_STR);
+            $q->bindParam(':password', $pass);
             $q->execute();
             $this->logger->LogDebug("New user added successfully");
             return true;
@@ -59,12 +59,12 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = "SELECT * FROM users WHERE email = ':email';";
+            $query = "SELECT * FROM users WHERE email = :email;";
             $q = $conn->prepare($query);
-            $q->bindParam(":email", $email);
+            $q->bindParam(':email', $email);
             $q->execute();
             $result = $q->fetch();
-            if($result["email"] == $email) {
+            if($result){//$result["email"] == $email) {
                 $this->logger->LogDebug("User found!");
                 return true;
             } else {
@@ -81,9 +81,9 @@ class Dao {
         $this->logger->LogDebug("Trying to find a user...");
         try {
             $conn = $this->getConnection();
-            $query = "SELECT * FROM users WHERE email = ':email';";
+            $query = "SELECT * FROM users WHERE email = :email;";
             $q = $conn->prepare($query);
-            $q->bindParam(":email", $email);
+            $q->bindParam(':email', $email);
             $q->execute();
             $user = $q->fetch();
             if(password_verify($password, $user['pass'])) {
