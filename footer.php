@@ -2,7 +2,6 @@
     <div id="footer">
       <div id="column">
         <h1>CONTACT</h1>
-        <p>Visit us or call</p>
         <p>Phone: 208-433-1777</p>
         <ul>
           <li><a href="https://www.instagram.com/lovelynailsboise/"><img class="social-logo" alt="instagram-logo" src="images/ig-logo.png"></a></li>
