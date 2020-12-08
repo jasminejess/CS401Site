@@ -15,7 +15,7 @@
     }  else {
         $_SESSION['output'][] = "Could not log in";
         $_SESSION["email_preset"] = $_POST["email"];
-        // $_SESSION["access_granted"] = false;
+        $_SESSION["access_granted"] = false;
         header("Location: https://stormy-cliffs-79964.herokuapp.com/login.php");
     }
     exit();

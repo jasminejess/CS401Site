@@ -86,7 +86,7 @@ class Dao {
             $q->bindParam(':email', $email);
             $q->execute();
             $user = $q->fetch();
-            if($user){ //password_verify($password, $user['pass'])) {
+            if($user && password_verify($password, $user['pass'])) {
                 $this->logger->LogDebug("User login valid");
                 return true;
             } else {
