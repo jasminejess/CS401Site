@@ -5,7 +5,7 @@
     require_once 'KLogger.php';
     $logger = new KLogger("log.txt", KLogger::DEBUG);
     $_SESSION['output'] = array();
-    $_SESSION["access_granted"] = false;
+    $_SESSION["access_granted"] = true;
 
     $dao = new Dao();
 
